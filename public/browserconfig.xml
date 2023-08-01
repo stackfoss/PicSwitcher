@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <!-- Tile settings -->
+    <tile>
+      <!-- Square logos -->
+      <square70x70logo src="/icons/windows11/Square44x44Logo.scale-100.png" />
+      <square150x150logo src="/icons/windows11/Square44x44Logo.scale-150.png" />
+      <square310x310logo src="/icons/windows11/Square44x44Logo.scale-200.png" />
+      <wide310x150logo src="/icons/windows11/Square44x44Logo.scale-400.png" />
+      <!-- Tile colors -->
+      <TileColor>#ffffff</TileColor>
+    </tile>
+  </msapplication>
+
+  <!-- Add other configurations here (if needed) -->
+
+</browserconfig>
+

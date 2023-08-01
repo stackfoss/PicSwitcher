@@ -1,0 +1,2 @@
+google.com, pub-0000000, DIRECT, 00000000
+

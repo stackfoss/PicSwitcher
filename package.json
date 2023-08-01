@@ -1,24 +1,30 @@
 {
-	"name": "svg-to-png-jpeg-favicon",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
-	},
-	"dependencies": {
-		"@types/node": "^20.4.5",
-		"antd": "^5.8.0",
-		"next": "^13.4.12",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-github-btn": "^1.2.1"
-	},
-	"devDependencies": {
-		"@types/react": "^18.2.18",
-		"eslint": "^8.46.0",
-		"eslint-config-next": "^13.4.12",
-		"typescript": "^5.1.6"
-	}
+  "name": "SVG2Image",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@eisberg-labs/next-google-adsense": "^4.0.2",
+    "@types/node": "^20.4.5",
+    "antd": "^5.8.0",
+    "next": "^13.4.12",
+    "next-pwa": "^5.6.0",
+    "next-sitemap": "^4.1.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-github-btn": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.18",
+    "eslint": "^8.46.0",
+    "eslint-config-next": "^13.4.12",
+    "typescript": "^4.4.3"
+  }
 }
+

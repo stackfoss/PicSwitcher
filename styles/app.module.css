@@ -1,88 +1,336 @@
 .main {
-	min-width: 400px;
-	padding: 20px 0px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
 }
 
-.spanText {
-	padding: 2px 3px;
-	background-color: #fafafa;
-	border: 1px solid #d9d9d9;
+.heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.dragger {
-	padding: 0px 20px;
-	width: 400px !important;
-	height: 200px !important;
+.description {
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 30px;
 }
 
-.dragger > span {
-	display: flex !important;
-	flex-direction: column;
-	align-items: center;
+.uploadText {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .canvasWrapper {
-	height: 110px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .canvas {
-	margin-top: 20px;
-	max-width: 100px;
+  margin-top: 20px;
+  max-width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.spanText {
+  padding: 2px 3px;
+  background-color: #fafafa;
+  border: 1px solid #d9d9d9;
+}
+
+.dragger {
+  padding: 0px 20px;
+  width: auto !important;
+  height:250px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dragger > span {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  padding: 15px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 0 10px;
+  color: #555;
 }
 
 .inputGroup {
-	margin: 30px 0px;
-	width: 400px;
-	display: flex;
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputGroup input {
-	text-align: center !important;
-}
-
-.inputGroup > div:first-of-type {
-	margin-right: 10px;
-}
-
-.radioLabel {
-	background-color: #fafafa;
-	cursor: text;
-}
-
-.radioLabel:hover {
-	color: initial;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .radioGroup {
-	margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.radioLabel {
+  background-color: #fafafa;
+  cursor: text;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.radioGroup label {
+  margin-bottom: 5px;
+}
+
+.radioGroup button {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.downloadButton {
+  margin: 15px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px 30px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.downloadButton:hover {
+  background-color: #0056b3;
 }
 
 .footer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
 }
 
-.footer > div {
-	margin-bottom: 15px;
+.footerColumns {
+  display: flex;
+  margin-top: 45px;
+  justify-content: space-between;
+  max-width: 80%;
+  width: 100%;
+  margin: 15px auto;
 }
 
-.footer > div:nth-of-type(2) {
-	margin-bottom: 5px;
+.footerColumn {
+  flex: 1;
+  margin: 0 15px;
 }
 
-.footer > div > span:first-of-type {
-	margin-right: 5px;
+.footerHeading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 5px;
+}
+
+.footerColumn ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footerColumn ul li a:hover {
+  color: #007bff;
+}
+
+.footerDescription {
+  text-align: center;
+}
+
+.footerSocials {
+  display: flex;
+  justify-content: center;
+}
+
+.footerSocials a {
+  margin: 0 5px;
+}
+
+.footerCopyright {
+  margin-top: 20px;
+  color: #777;
 }
 
 .collapse {
-	max-width: 400px;
-	width: 100%;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
 }
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.testimonialImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonialContent {
+  flex: 1;
+}
+
+.testimonialName {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.testimonialText {
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+  .main {
+    font-size: 18px;
+    padding: 20px 0;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .features {
+    flex-direction: column;
+    box-shadow: none;
+    background-color: #f9f9f9;
+    padding: 0;
+  }
+
+  .feature {
+    margin: 10px 0;
+  }
+  
+  .dragger {
+  width: auto !important;
+  height:200px !important;
+}
+
+  .uploadText {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .canvas {
+    max-width: 80px;
+  }
+
+  .inputGroup {
+    margin: 20px 0;
+  }
+
+  .radioGroup {
+    box-shadow: none;
+    background-color: #f9f9f9;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .radioLabel {
+    padding: 4px 8px;
+    margin-bottom: 8px;
+  }
+
+  .radioGroup button {
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+
+  .downloadButton {
+    background-color: #007bff;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonialImage {
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    box-shadow: none;
+    background-color: #f9f9f9;
+  }
+
+  .footerColumns {
+    flex-direction: column;
+    align-items: left;
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+
+  .footerColumn {
+    margin: 2px 0;
+  }
+}
+

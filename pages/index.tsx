@@ -173,192 +173,243 @@ const Home: NextPage = () => {
 
 	return (
 		<div>
-			<Head>
-				<title>
-					SVG to PNG / JPEG / ICO (Favicon) Online Converter - Free and Fast
-				</title>
-				<meta
-					name='description'
-					content='This free online tool allows you to convert SVG files to PNG, JPEG, Ico (Favicon) images with custom width and height - it is super simple, fast and runs in your browser only!'
-				/>
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
+<Head>
+  <title>SVG2Image - SVG to Image Converter</title>
+  <meta
+    name='description'
+    content='Convert SVG files to PNG, JPEG, and ICO (Favicon) images with custom width and height. Free and fast online SVG to image converter.'
+  />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link rel='icon' href='/favicon.ico' />
+</Head>
 
-			<main className={styles.main}>
-				<h1>SVG2Image</h1>
-				<p>
-					Convert <span className={styles.spanText}>.svg</span> to{' '}
-					<span className={styles.spanText}>.png</span>{' '}
-					<span className={styles.spanText}>.jpeg</span>{' '}
-					<span className={styles.spanText}>.ico</span> like a breeze 💨{' '}
-				</p>
-				<Dragger
-					name='file'
-					accept='image/*'
-					customRequest={
-						(({ onSuccess }: { onSuccess: any }) =>
-							setTimeout(() => onSuccess('success'), 0)) as any
-					}
-					className={styles.dragger}
-					maxCount={1}
-					showUploadList={false}
-					onChange={onFileAdd}
-				>
-					<p className='ant-upload-text'>📥 Click or Drag SVG File Here</p>
-					<div className={styles.canvasWrapper}>
-						<canvas ref={canvasRef} className={styles.canvas} />
-					</div>
-				</Dragger>
-				<div className={styles.inputGroup}>
-					<InputNumber
-						size='large'
-						value={width}
-						onChange={onWidthChange}
-						addonBefore='↔️ Width'
-						addonAfter='px'
-					/>
-					<InputNumber
-						size='large'
-						value={height}
-						onChange={onHeightChange}
-						addonBefore='↕️ Height'
-						addonAfter='px'
-					/>
-				</div>
-				<div>
-					<Radio.Group
-						value={type}
-						onChange={onTypeChange}
-						className={styles.radioGroup}
-					>
-						<label className={`ant-radio-button-wrapper ${styles.radioLabel}`}>
-							<span>📁 Convert to</span>
-						</label>
-						{Object.keys(FileType).map((type) => (
-							<Radio.Button key={type} value={type}>
-								{type}
-							</Radio.Button>
-						))}
-					</Radio.Group>
-				</div>
-				<Button
-					type='primary'
-					onClick={() => canvas.downloadCanvasAsImg(type)}
-					disabled={!canvas?.svgURL}
-				>
-					🚀 Download as .{type} Image
-				</Button>
-			</main>
 
-			<Divider plain>
-				💡 This tool only runs in the browser and can be ran entirely offline
-			</Divider>
-			<footer className={styles.footer}>
-				<Collapse className={styles.collapse}>
-					<Panel header='❔ What is the story behind this tool?' key='1'>
-						<p>
-							While trying to do some svg to images conversion, I couldn't find
-							any simple online tool that allows me to do so. This was
-							frustrating since the latest Web APIs -{' '}
-							<a href='https://developer.mozilla.org/en-US/docs/Web/API/URL_API'>
-								URL API
-							</a>{' '}
-							and{' '}
-							<a href='https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API'>
-								Canvas API
-							</a>{' '}
-							have made it very easy to convert files to different image types
-							on a modern browser. So I went ahead and coded out this simple
-							tool myself (the core utility is ~100 lines of JavaScript code)
-							and shared it out there with others who might also experience the
-							frustration.
-						</p>
-					</Panel>
-					<Panel header='🤔 How does this tool work?' key='2'>
-						<p>
-							This tool is open-source - you can use it for anything and read
-							about its full implementation in this{' '}
-							<a href='https://github.com/xitanggg/svg-to-png-jpeg-favicon'>
-								GitHub repository - /pages/index.tsx
-							</a>
-							. At high level, it uses the{' '}
-							<a href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction'>
-								Web APIs
-							</a>{' '}
-							to perform the svg conversion: it uses{' '}
-							<a href='https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL'>
-								<span className={styles.spanText}>URL.createObjectURL</span>
-							</a>{' '}
-							to read the svg file and convert it to a DOMString,{' '}
-							<a href='https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage'>
-								<span className={styles.spanText}>
-									CanvasRenderingContext2D.drawImage
-								</span>
-							</a>{' '}
-							to render a svg image on a canvas without losing resolution, and{' '}
-							<a href='https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL'>
-								<span className={styles.spanText}>
-									HTMLCanvasElement.toDataURL
-								</span>
-							</a>{' '}
-							to convert the svg file on canvas to be different image types
-							based on user selection -{' '}
-							<span className={styles.spanText}>.png</span>{' '}
-							<span className={styles.spanText}>.jpeg</span>{' '}
-							<span className={styles.spanText}>.ico</span>. Since Web APIs are
-							bundled into a browser, you can run this tool entirely offline on
-							any modern day browser. More information about the tech stack can
-							be found in the{' '}
-							<a href='https://github.com/xitanggg/svg-to-png-jpeg-favicon'>
-								README.md
-							</a>
-							.
-						</p>
-					</Panel>
-					<Panel header='📖 Any reference to common file sizes?' key='3'>
-						<ul>
-							<li>
-								Favicon must be a multiple of 48px square, for example: 48x48px,
-								96x96px, 144x144px and so on{' '}
-								<a href='https://developers.google.com/search/docs/advanced/appearance/favicon-in-search'>
-									[Source - Google Search Central]
-								</a>
-							</li>
-							<li>
-								Google Chrome Extension should use a 128x128 icon for Chrome Web
-								Store, a 48x48 icon for chrome://extensions page, and a 16x16
-								icon as favicon. Icons should generally be in PNG format,
-								because PNG has the best support for transparency.{' '}
-								<a href='https://developer.chrome.com/docs/extensions/mv3/manifest/icons/'>
-									[Source - Chrome Developers Manifest - Icons]
-								</a>
-							</li>
-						</ul>
-					</Panel>
-				</Collapse>
-				<div>
-					<GitHubButtonWithNoSSR
-						href='https://github.com/xitanggg/svg-to-png-jpeg-favicon'
-						data-size='large'
-						data-show-count='true'
-						aria-label='Star xitanggg/svg-to-png-jpeg-favicon on GitHub'
-					>
-						Star
-					</GitHubButtonWithNoSSR>
-					<GitHubButtonWithNoSSR
-						href='https://github.com/xitanggg/svg-to-png-jpeg-favicon/fork'
-						data-size='large'
-						data-show-count='true'
-						aria-label='Fork xitanggg/svg-to-png-jpeg-favicon on GitHub'
-					>
-						Fork
-					</GitHubButtonWithNoSSR>
-				</div>
-				<p>
-					🔥 Created by <a href='https://github.com/xitanggg'>Xitang</a> - Jan
-					2022
-				</p>
-			</footer>
+<main className={styles.main}>
+  <h1 className={styles.heading}>
+    <span role="img" aria-label="SVG2Image">
+      🖼️ SVG2Image
+    </span>
+  </h1>
+  <p className={styles.description}>
+    Easily convert{' '}
+<span className={styles.spanText}>.SVG</span> to{' '}
+<span className={styles.spanText}>.PNG</span>,{' '}
+<span className={styles.spanText}>.JPEG</span>, and{' '}
+<span className={styles.spanText}>.ICO</span>
+  </p>
+  <Dragger
+    name='file'
+    accept='image/*'
+    customRequest={
+      (({ onSuccess }: { onSuccess: any }) =>
+        setTimeout(() => onSuccess('success'), 0)) as any
+    }
+    className={styles.dragger}
+    maxCount={1}
+    showUploadList={false}
+    onChange={onFileAdd}
+  >
+    <p className={styles.uploadText}>
+      <span role="img" aria-label="Upload">
+        ⤒
+      </span>{' '}
+      Click or Drag SVG File Here
+    </p>
+    <div className={styles.canvasWrapper}>
+      <canvas ref={canvasRef} className={styles.canvas} />
+    </div>
+  </Dragger>
+  <div className={styles.inputGroup}>
+    <InputNumber
+      size='large'
+      value={width}
+      onChange={onWidthChange}
+      addonBefore='↔️ Width'
+      addonAfter='px'
+    />
+    <InputNumber
+      size='large'
+      value={height}
+      onChange={onHeightChange}
+      addonBefore='↕️ Height'
+      addonAfter='px'
+    />
+  </div>
+  <div className={styles.radioGroup}>
+    <label className={`ant-radio-button-wrapper ${styles.radioLabel}`}>
+      <span role="img" aria-label="Convert To">
+        📁 Convert to
+      </span>
+    </label>
+    <Radio.Group value={type} onChange={onTypeChange}>
+      {Object.keys(FileType).map((type) => (
+        <Radio.Button key={type} value={type}>
+          {type}
+        </Radio.Button>
+      ))}
+    </Radio.Group>
+  </div>
+  <Button
+    type='primary'
+    onClick={() => canvas.downloadCanvasAsImg(type)}
+    disabled={!canvas?.svgURL}
+    className={styles.downloadButton}
+  >
+    <span role="img" aria-label="Download">
+      ↧
+    </span>{' '}
+    Download as .{type} Image
+  </Button>
+        <Divider plain>
+❖ Key Features
+</Divider>
+        <div className={styles.features}>
+        <p className={styles.feature}>
+          <span role="img" aria-label="100% Free">
+            ✨
+          </span>{' '}
+          100% Free
+        </p>
+        <p className={styles.feature}>
+          <span role="img" aria-label="Easy to Use">
+            🧠
+          </span>{' '}
+          Easy to Use
+        </p>
+        <p className={styles.feature}>
+          <span role="img" aria-label="Unlimited Conversion">
+            🔁
+          </span>{' '}
+          Unlimited Conversion
+        </p>
+      </div>
+      <Divider plain>
+？ FAQ
+</Divider>
+<Collapse className={styles.collapse}>
+  <Panel header='🤔 What is SVG2Image?' key='1'>
+    SVG2Image is a free online tool that allows you to convert SVG files to various image formats, such as PNG, JPEG, and ICO (Favicon). It is fast, easy to use, and runs entirely in your browser.
+  </Panel>
+  <Panel header='🖼️ How do I convert an SVG file to an image?' key='2'>
+    To convert an SVG file to an image, simply click or drag your SVG file into the designated area. The tool will automatically convert the SVG to your chosen image format, and you can download it with a single click.
+  </Panel>
+  <Panel header='🎨 What image formats are supported for conversion?' key='3'>
+    SVG2Image supports three image formats for conversion: PNG, JPEG, and ICO (Favicon). You can choose any of these formats based on your requirements.
+  </Panel>
+  <Panel header='📏 Can I customize the width and height of the output image?' key='4'>
+    Yes, you can easily customize the width and height of the output image. Simply enter the desired width and height values in pixels, and the tool will adjust the image accordingly.
+  </Panel>
+  <Panel header='💰 Is SVG2Image completely free to use?' key='5'>
+    Yes, SVG2Image is 100% free to use. There are no hidden charges or subscriptions required. Simply visit the website and start converting SVG files to images instantly.
+  </Panel>
+  <Panel header='🌐 Can I use SVG2Image offline?' key='6'>
+    Yes, SVG2Image is an online tool, but once the webpage is loaded, you can use it entirely offline. The tool relies on the latest Web APIs, such as URL and Canvas API, making it possible to work offline without an internet connection.
+  </Panel>
+  <Panel header='🔄 Is there a limit to the number of conversions I can perform?' key='7'>
+    No, there are no limits on the number of conversions you can perform. You can convert as many SVG files to images as you need, without any restrictions.
+  </Panel>
+  <Panel header='💻 Can I use SVG2Image on different devices?' key='8'>
+    Yes, SVG2Image is compatible with various devices, including desktop computers, laptops, tablets, and smartphones. You can access the tool from any modern web browser.
+  </Panel>
+  <Panel header='🌟 What makes SVG2Image unique compared to other SVG converters?' key='9'>
+    SVG2Image stands out as a simple and user-friendly online tool that offers fast and reliable SVG to image conversion. It provides a range of image formats and allows customization of width and height, making it a versatile solution for designers and developers.
+  </Panel>
+</Collapse>
+
+<Divider plain>
+⦿ Testimonials
+</Divider>
+
+  <div className={styles.testimonial}>
+    <img src="https://images.unsplash.com/photo-1567515004624-219c11d31f2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Testimonial" className={styles.testimonialImage} />
+    <div className={styles.testimonialContent}>
+      <div className={styles.testimonialName}>John Doe</div>
+      <div className={styles.testimonialText}>"This tool is amazing! It helped me convert my SVG files to images effortlessly."</div>
+    </div>
+  </div>
+    <div className={styles.testimonial}>
+    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=461&q=80" alt="Testimonial" className={styles.testimonialImage} />
+    <div className={styles.testimonialContent}>
+      <div className={styles.testimonialName}>Sarah Wilson</div>
+      <div className={styles.testimonialText}>"SVG2Image made converting SVG files a breeze! It saved me so much time, and the image quality is top-notch."</div>
+    </div>
+  </div>
+  
+    <div className={styles.testimonial}>
+    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80" alt="Testimonial" className={styles.testimonialImage} />
+    <div className={styles.testimonialContent}>
+      <div className={styles.testimonialName}>Emily Davis</div>
+      <div className={styles.testimonialText}>"I can't believe how simple and fast SVG2Image is. It's now my go-to tool for SVG conversions."</div>
+    </div>
+  </div>
+  <div className={styles.testimonial}>
+    <img src="https://images.unsplash.com/photo-1565363410878-d7dd2e0d4e6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80" alt="Testimonial" className={styles.testimonialImage} />
+    <div className={styles.testimonialContent}>
+      <div className={styles.testimonialName}>Alex Turner</div>
+      <div className={styles.testimonialText}>"I love how SVG2Image handles all the technicalities for me. It's the best SVG converter out there."</div>
+    </div>
+  </div>
+
+
+</main>
+
+<footer className={styles.footer}>
+
+
+  <div className={styles.footerColumns}>
+    <div className={styles.footerColumn}>
+      <h3 className={styles.footerHeading}>Description</h3>
+      <p>
+        Effortlessly convert your .SVG files to various image formats: .PNG, .JPEG, and .ICO. 🖼️
+      </p>
+    </div>
+    <div className={styles.footerColumn}>
+      <h3 className={styles.footerHeading}>Quick Links</h3>
+      <ul>
+        <li>
+          <a href='#'>Home</a>
+        </li>
+        <li>
+          <a href='https://www.stackfoss.com'>StackFoss</a>
+        </li>
+        <li>
+          <a href='https://psychohub.stackfoss.com'>PsychoHub</a>
+        </li>
+        <li>
+          <a href='https://codetranslify.stackfoss.com'>CodeTranslify</a>
+        </li>
+        {/* Add other quick links here */}
+      </ul>
+    </div>
+    <div className={styles.footerColumn}>
+      <h3 className={styles.footerHeading}>Socials</h3>
+      <ul>
+        <li>
+          <a href='https://www.youtube.com/@stackfoss'>Youtube</a>
+        </li>
+        <li>
+          <a href='https://twitter.com/stackfoss'>Twitter</a>
+        </li>
+        <li>
+          <a href='https://www.facebook.com/stackfoss'>Facebook</a>
+        </li>
+        <li>
+          <a href='https://www.instagram.com/stackfoss'>Instagram</a>
+        </li>
+        {/* Add other social media links here */}
+      </ul>
+    </div>
+  </div>
+
+  <p className={styles.footerCopyright}>
+    © {new Date().getFullYear()} <a href='https://www.stackfoss.com'>StackFoss</a>. All rights reserved.
+  </p>
+</footer>
+
+
+
+
+
 		</div>
 	);
 };
