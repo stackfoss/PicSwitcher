@@ -1,0 +1,22 @@
+.faqContainer {
+  text-align: left;
+}
+
+.faqItemLabel {
+  font-weight: bold;
+}
+
+.faqItemContent {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .faqItemContent {
+    margin-left: 0; 
+  }
+
+  .ant-collapse-item {
+    margin-bottom: 15px; 
+  }
+}
+
