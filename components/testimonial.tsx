@@ -15,7 +15,7 @@ const Testimonial: React.FC = () => {
         />
         <div className={styles.testimonialContent}>
           <div className={styles.testimonialName}>John Doe</div>
-          <div className={styles.testimonialText}>"This tool is amazing! It helped me convert my SVG files to images effortlessly."</div>
+          <div className={styles.testimonialText}>"PicSwitcher is amazing! It helped me convert my SVG files to images effortlessly."</div>
         </div>
       </div>
 
@@ -29,7 +29,7 @@ const Testimonial: React.FC = () => {
         />
         <div className={styles.testimonialContent}>
           <div className={styles.testimonialName}>Sarah Wilson</div>
-          <div className={styles.testimonialText}>"SVG2Image made converting SVG files a breeze! It saved me so much time, and the image quality is top-notch."</div>
+          <div className={styles.testimonialText}>"PicSwitcher made converting SVG files a breeze! It saved me so much time, and the image quality is top-notch."</div>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ const Testimonial: React.FC = () => {
         />
         <div className={styles.testimonialContent}>
           <div className={styles.testimonialName}>Emily Davis</div>
-          <div className={styles.testimonialText}>"I can't believe how simple and fast SVG2Image is. It's now my go-to tool for SVG conversions."</div>
+          <div className={styles.testimonialText}>"I can't believe how simple and fast PicSwitcher is. It's now my go-to tool for image conversions."</div>
         </div>
       </div>
 
@@ -57,7 +57,7 @@ const Testimonial: React.FC = () => {
         />
         <div className={styles.testimonialContent}>
           <div className={styles.testimonialName}>Alex Turner</div>
-          <div className={styles.testimonialText}>"I love how SVG2Image handles all the technicalities for me. It's the best SVG converter out there."</div>
+          <div className={styles.testimonialText}>"I love how PicSwitcher handles all the technicalities for me. It's the best image converter out there."</div>
         </div>
       </div>
     </div>

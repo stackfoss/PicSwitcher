@@ -1,3 +1,7 @@
+/* styles.module.css */
+
+/* Common Styles */
+
 .main {
   display: flex;
   flex-direction: column;
@@ -13,11 +17,54 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
+/* NavBar Section*/
+
+
+.navbar {
+  padding: 20px;
+  color: #fff;
+}
+
+.navbarContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.anchor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ant-anchor {
+  background-color: transparent;
+}
+
+.ant-anchor-link-title {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.ant-anchor-link-title:hover {
+  color: #f0f0f0;
+}
+
+.pic {
+  color: #ff6347;
+}
 
 .description {
   font-size: 18px;
-  color: #888;
-  margin-bottom: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+   border: 1px solid #c3c3c3;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.spanText {
+  color: #1890ff;
 }
 
 .uploadText {
@@ -25,107 +72,122 @@
   margin-bottom: 20px;
 }
 
+/* Dragger Component */
+
+.dragger {
+  padding: 20px;
+  border: 2px dashed #1890ff;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.uploadIcon {
+  font-size: 48px;
+  color: #1890ff;
+}
+
+.uploadText {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1890ff;
+  margin: 10px 0;
+}
+
 .canvasWrapper {
-  height: 110px;
+  width: 100%;
+  height: 70px; /* Adjust the height as needed */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .canvas {
-  margin-top: 20px;
-  max-width: 100px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.spanText {
-  padding: 2px 3px;
-  background-color: #fafafa;
-  border: 1px solid #d9d9d9;
-}
-
-.dragger {
-  padding: 0px 20px;
-  width: 600px !important;
-  height:250px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.dragger > span {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-}
+/* Features Section */
 
 .features {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  background-color: #fff;
-  padding: 15px;
+  border: 1px solid #c3c3c3;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 7px;
 }
 
 .feature {
   display: flex;
   align-items: center;
   font-size: 16px;
-  margin: 0 10px;
+  margin: 10px 0;
   color: #555;
 }
 
-.inputGroup {
-  margin: 30px 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+.icon {
+  font-size: 24px;
+  color: #1890ff;
+  margin-right: 2px;
+  margin-left: 8px;
 }
 
-.inputGroup input {
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+.featureText {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Input and Radio Group */
+
+.inputGroup {
+  margin: 20px 0;
 }
 
 .radioGroup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  background-color: #fff;
-  padding: 15px;
+  background-color: #f9f9f9;
+  padding: 10px;
   border-radius: 4px;
+ 
 }
 
 .radioLabel {
-  background-color: #fafafa;
-  cursor: text;
-  padding: 6px 10px;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 8px;
   border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.radioGroup label {
-  margin-bottom: 5px;
+  background-color: #f5f5f5;
+  font-weight: bold;
 }
 
 .radioGroup button {
-  margin-right: 8px;
-  margin-bottom: 8px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1890ff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.radioGroup button:hover {
+  background-color: #0056b3;
 }
 
 .downloadButton {
   margin: 15px auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  background-color: #007bff;
-  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  padding: 10px 15px 30px 15px;
-  font-size: 16px;
+  background-color: #1890ff;
+  color: #fff;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -133,14 +195,15 @@
 .downloadButton:hover {
   background-color: #0056b3;
 }
+/* Footer Section */
 
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  background-color: #f9f9f9;
+  border-top:1px solid #d1d1d1;
+  background-color: #fff;
 }
 
 .footerColumns {
@@ -198,13 +261,28 @@
   margin-top: 20px;
   color: #777;
 }
+  /* FAQs Sections*/
+  .faqContainer {
+    text-align: left;
+  }
+
+  .faqItemLabel {
+    font-weight: bold;
+  }
+
+  .faqItemContent {
+    margin-left: 20px;
+  }
+
+/* Testimonial Section */
 
 .testimonial {
   display: flex;
+  background-color: #F4F4F4;
   align-items: center;
   margin-bottom: 20px;
   max-width: 500px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border:1px solid #c4c4c4;
   border-radius: 4px;
   padding: 10px;
 }
@@ -225,6 +303,7 @@
   font-size: 18px;
   font-weight: bold;
   text-align: left;
+  color: #1890ff;
 }
 
 .testimonialText {
@@ -233,7 +312,21 @@
   text-align: left;
 }
 
+/* Divider Styles */
+.ant-divider-plain {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1890ff;
+}
+
+/* Optional: Adjust the margin or padding if needed */
+.ant-divider-plain {
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
 /* Media Query for Mobile Screens */
+
 @media (max-width: 600px) {
   .main {
     font-size: 18px;
@@ -243,9 +336,18 @@
   .heading {
     font-size: 24px;
   }
+  
+  .anchor {
+    flex-direction: column;
+  }
+  
+  .ant-anchor-link {
+    margin: 5px 0;
+  }
 
   .description {
     font-size: 16px;
+    padding: 8px;
   }
 
   .features {
@@ -258,19 +360,21 @@
   .feature {
     margin: 10px 0;
   }
-  
-  .dragger {
-  width: auto !important;
-  height:200px !important;
-}
 
-  .uploadText {
-    font-size: 18px;
-    margin-bottom: 10px;
+  .icon {
+    font-size: 20px;
   }
 
-  .canvas {
-    max-width: 80px;
+  .featureText {
+    font-size: 14px;
+  }
+  
+  .uploadIcon {
+    font-size: 36px;
+  }
+  
+  .uploadText {
+    font-size: 14px;
   }
 
   .inputGroup {
@@ -295,7 +399,7 @@
   }
 
   .downloadButton {
-    background-color: #007bff;
+    background-color: #1890ff;
     padding: 8px 15px;
     font-size: 14px;
   }
@@ -304,6 +408,14 @@
     margin-bottom: 15px; 
   }
 
+  .faqItemContent {
+      margin-left: 0;
+    }
+
+  .ant-collapse-item {
+      margin-bottom: 15px;
+    }
+    
   .testimonial {
     flex-direction: column;
     align-items: center;
@@ -328,11 +440,12 @@
   .footerColumn {
     margin: 2px 0;
   }
+
   .footerCount {
-    
     justify-content: center;
     align-items: center;
     text-align: center;
   }
+
 }
 

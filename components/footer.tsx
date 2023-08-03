@@ -19,12 +19,14 @@ const Footer = () => {
   }, []);
 
   return (
+ 
     <footer className={styles.footer}>
+     <span className={styles.dashed}/>
       <div className={styles.footerColumns}>
         <div className={styles.footerColumn}>
           <h3 className={styles.footerHeading}>Description</h3>
           <p>
-            Effortlessly convert your .SVG files to various image formats: .PNG, .JPEG, and .ICO. 🖼️
+            PicSwitcher - Image Converter & Resizer. Effortlessly convert and resize images. Supports various formats. Perfect for designers and developers. Enhance your workflow. 🖼️
           </p>
         </div>
         <div className={styles.footerColumn}>

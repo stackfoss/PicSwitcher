@@ -2,11 +2,14 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useEffect, useRef, useState } from 'react';
 import styles from '../styles/app.module.css';
-import {ColumnWidthOutlined, CloudUploadOutlined, LoadingOutlined} from "@ant-design/icons";
+import {ColumnWidthOutlined, CloudUploadOutlined, LoadingOutlined, OrderedListOutlined, DownloadOutlined} from "@ant-design/icons";
+import Navbar from '../components/navbar';
+import Howto from '../components/howto';
 import Faq from '../components/faq';
 import Feature from '../components/feature';
 import MoreFeature from '../components/morefeature';
 import Testimonial from '../components/testimonial';
+import Downloadapp from '../components/download';
 import Footer from '../components/footer';
 import {
 	Button,
@@ -195,10 +198,10 @@ useEffect(() => {
 	return (		
 <div>
 <Head>
-  <title>SVG2Image - SVG to Image Converter</title>
+  <title>PicSwitcher - Image Conversion Made Easy</title>
   <meta
     name='description'
-    content='Convert SVG files to PNG, JPEG, and ICO (Favicon) images with custom width and height. Free and fast online SVG to image converter.'
+    content='Your Ultimate Image Conversion and Resizing Tool. Easily convert and resize images between various formats including PNG, JPEG, SVG, ICO, TIFF, WEBP, EPS, PSD, and ICNS. Transform your images effortlessly with our user-friendly interface. Resize images to your desired dimensions and maintain quality. Perfect for designers, developers, and anyone who needs quick and efficient image manipulation. Try PicSwitcher now and enhance your image workflow.'
   />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <link rel='icon' href='/favicon.ico' />
@@ -207,12 +210,15 @@ useEffect(() => {
 
 <main className={styles.main}>
 
-<h1 className={styles.heading}>
-    <span role="img" aria-label="SVG2Image">
-      🖼️ SVG2Image
-    </span>
-  </h1>
-  <p className={styles.description}>
+      <h1 className={styles.heading}>
+        <span role="img" aria-label="PicSwitcher">
+          <span className={styles.pic}>Pic</span>Switcher
+        </span>
+      </h1>
+  
+  <Navbar />
+  
+<p className={styles.description}>
     Easily convert{' '}
 <span className={styles.spanText}>.PNG</span>{' '}<ColumnWidthOutlined />{' '}
 <span className={styles.spanText}>.JPEG</span>{' '}<ColumnWidthOutlined />{' '}
@@ -284,26 +290,35 @@ useEffect(() => {
       ↧
     </span>{' '}
     Download as .{type} Image
-  </Button>"
+  </Button>
+<Divider plain className={styles.antDividerPlain}>
+<OrderedListOutlined /> Steps
+</Divider>
 
+<Howto />
 
-
-        <Divider plain>
+<Divider plain className={styles.antDividerPlain}>
 ❖ Key Features
 </Divider>
 <Feature />
 <MoreFeature />
-<Divider plain>
-？ FAQ
+<Divider plain className={styles.antDividerPlain}>
+？ FAQs
 </Divider>
 
 <Faq />
 
-<Divider plain>
+<Divider plain className={styles.antDividerPlain}>
 ⦿ Testimonials
 </Divider>
 
 <Testimonial />
+
+<Divider plain className={styles.antDividerPlain}>
+<DownloadOutlined /> Download
+</Divider>
+
+<Downloadapp />
 
 </main>
 

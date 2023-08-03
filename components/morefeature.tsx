@@ -1,30 +1,31 @@
 import React from 'react';
 import styles from '../styles/app.module.css';
-import {DollarOutlined, DiffOutlined, FireOutlined} from '@ant-design/icons';
+import { DollarOutlined, DiffOutlined, FireOutlined } from '@ant-design/icons';
 
 const MoreFeature: React.FC = () => {
   return (
     <div className={styles.features}>
-      <p className={styles.feature}>
-        <span role="img" aria-label="100% Free">
-        <DollarOutlined />
-        </span>{' '}
-        100% Free
-      </p>
-      <p className={styles.feature}>
-        <span role="img" aria-label="Easy to Use">
+      <div className={styles.feature}>
+        <span className={styles.icon}>
+          <DollarOutlined />
+        </span>
+        <p className={styles.featureText}>100% Free</p>
+      </div>
+      <div className={styles.feature}>
+        <span className={styles.icon}>
           <FireOutlined />
-        </span>{' '}
-        Easy to Use
-      </p>
-      <p className={styles.feature}>
-        <span role="img" aria-label="Unlimited Conversion">
+        </span>
+        <p className={styles.featureText}>Easy to Use</p>
+      </div>
+      <div className={styles.feature}>
+        <span className={styles.icon}>
           <DiffOutlined />
-        </span>{' '}
-        Unlimited Conversion
-      </p>
+        </span>
+        <p className={styles.featureText}>Unlimited Conversion</p>
+      </div>
     </div>
   );
 };
 
 export default MoreFeature;
+

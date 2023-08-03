@@ -1,34 +1,34 @@
 import React from 'react';
 import styles from '../styles/app.module.css';
-import {ScissorOutlined, FileJpgOutlined, FileImageOutlined, PictureOutlined} from '@ant-design/icons';
+import { ScissorOutlined, FileJpgOutlined, FileImageOutlined, PictureOutlined } from '@ant-design/icons';
 
 const Feature: React.FC = () => {
   return (
     <div className={styles.features}>
-      <p className={styles.feature}>
-        <span role="img" aria-label="Resize Images">
+      <div className={styles.feature}>
+        <span className={styles.icon}>
           <ScissorOutlined />
-        </span>{' '}
-        Resize Images
-      </p>
-      <p className={styles.feature}>
-        <span role="img" aria-label="PNG to JPEG Conversion">
+        </span>
+        <p className={styles.featureText}>Resize Images</p>
+      </div>
+      <div className={styles.feature}>
+        <span className={styles.icon}>
           <FileImageOutlined />
-        </span>{' '}
-        PNG to JPEG Conversion
-      </p>
-      <p className={styles.feature}>
-        <span role="img" aria-label="PNG to ICO (Favicon) Conversion">
-         <PictureOutlined />
-        </span>{' '}
-        PNG to ICO (Favicon) Conversion
-      </p>
-      <p className={styles.feature}>
-        <span role="img" aria-label="JPEG to PNG Conversion">
-        <FileJpgOutlined />
-        </span>{' '}
-        JPEG to PNG Conversion
-      </p>
+        </span>
+        <p className={styles.featureText}>PNG to JPEG Conversion</p>
+      </div>
+      <div className={styles.feature}>
+        <span className={styles.icon}>
+          <PictureOutlined />
+        </span>
+        <p className={styles.featureText}>PNG to ICO (Favicon) Conversion</p>
+      </div>
+      <div className={styles.feature}>
+        <span className={styles.icon}>
+          <FileJpgOutlined />
+        </span>
+        <p className={styles.featureText}>JPEG to PNG Conversion</p>
+      </div>
     </div>
   );
 };
