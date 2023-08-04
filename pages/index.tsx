@@ -292,33 +292,45 @@ useEffect(() => {
     Download as .{type} Image
   </Button>
 <Divider plain className={styles.antDividerPlain}>
-<OrderedListOutlined /> Steps
+<OrderedListOutlined /> How It Works
 </Divider>
 
+
+<div id="how-to">
 <Howto />
+</div>
 
 <Divider plain className={styles.antDividerPlain}>
 ❖ Key Features
 </Divider>
+<div id="features">
 <Feature />
+</div>
 <MoreFeature />
 <Divider plain className={styles.antDividerPlain}>
 ？ FAQs
 </Divider>
 
-<Faq />
 
+<div id="faq">
+    <Faq />
+</div>
 <Divider plain className={styles.antDividerPlain}>
 ⦿ Testimonials
 </Divider>
 
-<Testimonial />
+  <div id="testimonials">
+    <Testimonial />
+  </div>
 
 <Divider plain className={styles.antDividerPlain}>
 <DownloadOutlined /> Download
 </Divider>
 
-<Downloadapp />
+
+<div id="download">
+ <Downloadapp />
+</div>
 
 </main>
 

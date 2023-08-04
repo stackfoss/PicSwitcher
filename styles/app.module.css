@@ -17,8 +17,8 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* NavBar Section*/
 
+/* NavBar Section */
 
 .navbar {
   padding: 20px;
@@ -57,7 +57,7 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
-   border: 1px solid #c3c3c3;
+  border: 1px solid #c3c3c3;
   padding: 10px;
   border-radius: 8px;
   background-color: #ffffff;
@@ -108,17 +108,28 @@
   max-height: 100%;
 }
 
+/* howToStyles.module.css */
+
+.steps {
+  /* Add your container styles here */
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
 /* Features Section */
 
 .features {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  border: 1px solid #c3c3c3;
-  background-color: #ffffff;
-  padding: 12px;
-  border-radius: 7px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
 }
 
 .feature {
@@ -151,7 +162,6 @@
   background-color: #f9f9f9;
   padding: 10px;
   border-radius: 4px;
- 
 }
 
 .radioLabel {
@@ -195,15 +205,18 @@
 .downloadButton:hover {
   background-color: #0056b3;
 }
+
 /* Footer Section */
 
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 5px;
-  border-top:1px solid #d1d1d1;
-  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
 }
 
 .footerColumns {
@@ -261,28 +274,29 @@
   margin-top: 20px;
   color: #777;
 }
-  /* FAQs Sections*/
-  .faqContainer {
-    text-align: left;
-  }
 
-  .faqItemLabel {
-    font-weight: bold;
-  }
+/* FAQs Sections */
+.faqContainer {
+  text-align: left;
+}
 
-  .faqItemContent {
-    margin-left: 20px;
-  }
+.faqItemLabel {
+  font-weight: bold;
+}
+
+.faqItemContent {
+  margin-left: 20px;
+}
 
 /* Testimonial Section */
 
 .testimonial {
   display: flex;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   align-items: center;
   margin-bottom: 20px;
   max-width: 500px;
-  border:1px solid #c4c4c4;
+  border: 1px solid #c4c4c4;
   border-radius: 4px;
   padding: 10px;
 }
@@ -336,11 +350,11 @@
   .heading {
     font-size: 24px;
   }
-  
+
   .anchor {
     flex-direction: column;
   }
-  
+
   .ant-anchor-link {
     margin: 5px 0;
   }
@@ -348,6 +362,18 @@
   .description {
     font-size: 16px;
     padding: 8px;
+  }
+  .steps {
+    /* Adjust styles for mobile screens */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .features {
@@ -368,11 +394,11 @@
   .featureText {
     font-size: 14px;
   }
-  
+
   .uploadIcon {
     font-size: 36px;
   }
-  
+
   .uploadText {
     font-size: 14px;
   }
@@ -405,17 +431,17 @@
   }
 
   .ant-collapse-item {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
   }
 
   .faqItemContent {
-      margin-left: 0;
-    }
+    margin-left: 0;
+  }
 
   .ant-collapse-item {
-      margin-bottom: 15px;
-    }
-    
+    margin-bottom: 15px;
+  }
+
   .testimonial {
     flex-direction: column;
     align-items: center;
@@ -446,6 +472,5 @@
     align-items: center;
     text-align: center;
   }
-
 }
 

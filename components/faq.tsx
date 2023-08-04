@@ -32,7 +32,7 @@ const items: CollapseProps['items'] = [
   {
     key: '6',
     label: '🔄 Is there a limit to the number of conversions I can perform?',
-    children: <p>No, there are no limits on the number of conversions you can perform. You can convert and resize as many images as you need, without any restrictions.</p>,
+    children: <p>No, there are no limits to the number of conversions you can perform. You can convert and resize as many images as you need, without any restrictions.</p>,
   },
   {
     key: '7',
@@ -55,7 +55,9 @@ const Faq: React.FC = () => {
     <div className={styles.faqContainer}>
       <Collapse items={items} defaultActiveKey={['1']} onChange={onChange}>
         {items.map((item) => (
-          <Collapse.Panel key={item.key} header={<div className={styles.faqItemLabel}>{item.label}</div>}>
+          <Collapse.Panel
+            key={item.key ?? ('undefined-' + Math.random().toString(36).substr(2, 9))}
+            header={<div className={styles.faqItemLabel}>{item.label}</div>}>
             <div className={styles.faqItemContent}>{item.children}</div>
           </Collapse.Panel>
         ))}
@@ -65,3 +67,5 @@ const Faq: React.FC = () => {
 };
 
 export default Faq;
+
+

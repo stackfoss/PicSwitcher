@@ -1,9 +1,11 @@
 import React from 'react';
 import { UploadOutlined,DownloadOutlined, RetweetOutlined, SmileOutlined } from '@ant-design/icons';
 import { Steps } from 'antd';
+import styles from '../styles/app.module.css';
 
 const Howto: React.FC = () => (
-  <Steps
+<div className={styles['steps']}>
+  <Steps 
     items={[
       {
         title: 'Upload',
@@ -27,6 +29,7 @@ const Howto: React.FC = () => (
       },
     ]}
   />
+  </div>
 );
 
 export default Howto;
