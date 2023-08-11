@@ -16,7 +16,7 @@ const downloadQRCode = () => {
 
 const Downloadapp: React.FC = () => (
   <div id="myqrcode">
-    <QRCode value="https://svg2image.vercel.app/" bgColor="#fff" style={{ marginBottom: 16 }} />
+    <QRCode value="https://picswitcher.stackfoss.com/" bgColor="#fff" style={{ marginBottom: 16 }} />
     <Button type="primary" onClick={downloadQRCode}>
       Download
     </Button>

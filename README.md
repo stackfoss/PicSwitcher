@@ -1,43 +1,51 @@
-# 🎨 SVG to PNG / JPEG / ICO (Favicon) Converter
+# PicSwitcher Theme 
 
-Hi there👋 This is a free online tool that allows you to convert `SVG` files to `PNG`, `JPEG`, `ICO` (Favicon) images.
+Congratulations on your purchase of the PicSwitcher Next.js JAMstack theme! 🥳️
 
-It is very simple and fast - it runs only in your browser and allows you to customize image width and height💨 Try it out here: [https://svg-to-png-jpeg-favicon.vercel.app](https://svg-to-png-jpeg-favicon.vercel.app)
+Welcome to the comprehensive installation and setup guide for PicSwitcher — the revolutionary Next.js theme that empowers you to effortlessly switch between image formats, resize images, and elevate your design capabilities. This guide will walk you through the installation process, system requirements, and essential setup steps to get PicSwitcher up and running smoothly using Yarn.
 
-![Gif Demo](https://media.giphy.com/media/QFgU6UbCo7rv4idP90/giphy.gif)
+## Table of Contents
+1. [Introduction](#introduction)
+2. [System Requirements](#system-requirements)
+3. [Installation Steps](#installation-steps)
+4. [Troubleshooting](#troubleshooting)
+5. [Additional Resources](#additional-resources)
+6. [Contact Support](#contact-support)
 
-## 💡 Story
+## 1. Introduction
+PicSwitcher is a feature-rich Next.js theme designed to streamline the process of working with images. With seamless format conversion and intuitive resizing options, PicSwitcher empowers designers and developers to transform their visuals effortlessly.
 
-While trying to do some svg to images conversion, I couldn't find any simple online tool that allows me to do so🤯 This was frustrating since the latest `Web APIs` - [URL API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) and [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) have made it very easy to convert files to different image types on a modern browser. So I went ahead and coded out this simple tool myself and shared it out there with others who might also experience the frustration🔥
+## 2. System Requirements
+Before you begin, ensure that your system meets the following requirements:
 
-## ⚙️ Implementation
+- Node.js (>= v18.17.0): PicSwitcher is built on Next.js, which requires Node.js. Make sure you have Node.js installed on your machine. (Recommended version: LTS)
+- Yarn (>= 1.22.19): Yarn is used for managing dependencies. Ensure you have Yarn (version 1.x) installed.
+- GitHub Account: You'll need a GitHub account to access the PicSwitcher repository and manage your code.
+- Netlify or Vercel Account: You'll need an account with Netlify or Vercel for deployment and hosting purposes.
 
-This tool is open-source - you can use it for anything and read about its full implementation in `/pages/index.tsx`. The core utility is the `Canvas Class`, which is only ~100 lines of JavaScript code. At high level, it uses the below [Web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) to perform the svg conversion:
+## 3. Installation Steps
+Follow these steps to install PicSwitcher using Yarn:
 
-1. [URL.createObjectURL](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL) to read the svg file and convert it to a DOMString
-2. [CanvasRenderingContext2D.drawImage](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage) to render a svg image on a canvas without losing resolution
-3. [HTMLCanvasElement.toDataURL](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL) to convert the svg file on canvas to be different image types based on user selection - `.png` `.jpeg` `.ico`
+1. Download the theme package from Themeforest.
+2. Open a terminal and navigate to the theme's directory: `cd PicSwitcher`
+3. Install the required dependencies using Yarn: `yarn install`
+4. Start Development Server: Run `yarn dev` to start the development server. Open your browser and navigate to http://localhost:3000 to see the initial website.
+5. Build locally: `yarn build`
 
-Since Web APIs are bundled into a browser, you can run this tool entirely offline on any modern day browser.
+## 4. Troubleshooting
+Encountering issues? Here are some troubleshooting tips:
 
-## 🍔 Tech Stack
+- Dependencies: Ensure you have installed all required dependencies using `yarn install`.
+- Node Version: Confirm you're using a compatible Node.js version (LTS recommended).
+- Clear Cache: If you experience unexpected behavior, try clearing your browser's cache and restarting the server.
 
-| Language             | [TypeScript](https://www.typescriptlang.org/) |
-| -------------------- | --------------------------------------------- |
-| JavaScript Framework | React & [Next.js](https://nextjs.org)         |
-| React UI Framework   | [Ant Design](https://ant.design)              |
-| CSS                  | CSS modules                                   |
-| Deployment           | [Vercel](https://vercel.com)\*                |
+## 5. Additional Resources
+Explore these resources for further guidance:
 
-\*Vercel is used over GitHub page to deploy this tool because it has better SEO support with SSG and can be potentially helpful for others to find it on Google
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Node.js Documentation](https://nodejs.org/docs)
+- [Yarn Documentation](https://classic.yarnpkg.com/docs)
 
-## 💻Local Testing
+## 6. Contact Support
+If you encounter challenges beyond what's covered in this documentation, don't hesitate to reach out to our support team at [support@stackfoss.com](mailto:support@stackfoss.com). We're here to assist you on your journey with PicSwitcher.
 
-```bash
-git clone https://github.com/xitanggg/svg-to-png-jpeg-favicon.git
-cd ./svg-to-png-jpeg-favicon
-npm install
-npm run dev
-```
-
-Finally, open [http://localhost:3000](http://localhost:3000) with your browser to use the tool locally 🚀

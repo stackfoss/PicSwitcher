@@ -6,10 +6,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
         {/* Add the meta tags and link tags here */}
-        <meta name="application-name" content="SVG2Image" />
+        <meta name="application-name" content="PicSwitcher" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="SVG2Image" />
+        <meta name="apple-mobile-web-app-title" content="PicSwitcher" />
         <meta name="description" content="Effortlessly convert your .SVG files to various image formats: .PNG, .JPEG, and .ICO." />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -30,17 +30,17 @@ class MyDocument extends Document {
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=optional"/>
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://svg2image.stackfoss.com" />
-        <meta name="twitter:title" content="SVG2Image" />
+        <meta name="twitter:url" content="https://picswitcher.stackfoss.com" />
+        <meta name="twitter:title" content="PicSwitcher" />
         <meta name="twitter:description" content="Effortlessly convert your .SVG files to various image formats: .PNG, .JPEG, and .ICO." />
-        <meta name="twitter:image" content="https://svg2image.stackfoss.com/icons/android/android-launchericon-192-192.png" />
+        <meta name="twitter:image" content="https://picswitcher.stackfoss.com/icons/android/android-launchericon-192-192.png" />
         <meta name="twitter:creator" content="@stackfoss" />
-        <meta property="og:type" content="SVG2Image" />
-        <meta property="og:title" content="SVG2Image" />
+        <meta property="og:type" content="PicSwitcher" />
+        <meta property="og:title" content="PicSwitcher" />
         <meta property="og:description" content="Effortlessly convert your .SVG files to various image formats: .PNG, .JPEG, and .ICO." />
-        <meta property="og:site_name" content="SVG2Image" />
-        <meta property="og:url" content="https://svg2image.stackfoss.com" />
-        <meta property="og:image" content="https://svg2image.stackfoss.com/icons/ios/1024.png" />
+        <meta property="og:site_name" content="PicSwitcher" />
+        <meta property="og:url" content="https://picswitcher.stackfoss.com" />
+        <meta property="og:image" content="https://picswitcher.stackfoss.com/icons/ios/1024.png" />
 
         {/* Uncomment the below lines if you have apple splash screen images */}
         {/* 
