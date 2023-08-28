@@ -8,6 +8,11 @@ If you find this project useful and would like to support its development, consi
 
 [![Support on Patreon](https://img.shields.io/badge/support-patreon-orange.svg)](https://www.patreon.com/akselinc)
 
+<p align="center">
+  <img src="[https://pub-e8eb8e277f4747e8b9797670baeb7393.r2.dev/projects/PsychoHub/PsychoHub%20%20Responsive%20Multipurpose%20Nextjs%20Theme.png](https://pub-e8eb8e277f4747e8b9797670baeb7393.r2.dev/projects/PicSwitcher/picswitcher.png)" alt="PicSwitcher">
+</p>
+
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [System Requirements](#system-requirements)
