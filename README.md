@@ -13,11 +13,15 @@ If you find this project useful and would like to support its development, consi
 2. [System Requirements](#system-requirements)
 3. [Installation Steps](#installation-steps)
 4. [Troubleshooting](#troubleshooting)
-5. [Usage](#usage)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Additional Resources](#additional-resources)
-9. [Contact Support](#contact-support)
+5. [Features](#features)
+6. [Usage](#usage)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Additional Resources](#additional-resources)
+10. [Credits](#credits)
+11. [Sponsors](#sponsors)
+12. [Contact](#contact)
+13. [Contact Support](#contact-support)
 
 ## 1. Introduction
 PicSwitcher is a feature-rich Next.js theme designed to streamline the process of working with images. With seamless format conversion and intuitive resizing options, PicSwitcher empowers designers and developers to transform their visuals effortlessly.
@@ -46,21 +50,44 @@ Encountering issues? Here are some troubleshooting tips:
 - Node Version: Confirm you're using a compatible Node.js version (LTS recommended).
 - Clear Cache: If you experience unexpected behavior, try clearing your browser's cache and restarting the server.
 
-## 5. Usage
-Provide instructions and examples on how to use the PicSwitcher theme in a project. This could include how to switch between image formats, resize images, and integrate the theme's features into your designs.
+## 5. Features
+PicSwitcher comes with a range of powerful features:
 
-## 6. Contributing
+- **Google AdSense Integration**: Easily monetize your website with Google AdSense ads.
+- **Google Analytics Integration**: Track and analyze user behavior with Google Analytics.
+- **Progressive Web App (PWA)**: Create a seamless and engaging user experience with PWA capabilities.
+- **Image Resize**: Resize images to various dimensions without compromising quality.
+- **PNG to JPEG Conversion**: Convert PNG images to JPEG format.
+- **PNG to ICO (Favicon) Conversion**: Convert PNG images to ICO format for use as favicons.
+- **JPEG to PNG Conversion**: Convert JPEG images to PNG format.
+
+## 6. Usage
+To see the live website powered by PicSwitcher, visit [PicSwitcher Live Demo](https://picswitcher.stackfoss.com). Explore the features and functionalities and get a feel for how PicSwitcher can enhance your projects.
+
+## 7. Contributing
 We welcome contributions from the community! If you'd like to contribute to PicSwitcher, please follow our [Contribution Guidelines](CONTRIBUTING.md).
 
-## 7. License
+## 8. License
 PicSwitcher is released under the [MIT License](LICENSE).
 
-## 8. Additional Resources
+## 9. Additional Resources
 Explore these resources for further guidance:
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Node.js Documentation](https://nodejs.org/docs)
 - [Yarn Documentation](https://classic.yarnpkg.com/docs)
 
-## 9. Contact Support
-If you encounter challenges or have questions, don't hesitate to reach out to our community and support team via [GitHub Issues](https://github.com/Akselinc/PicSwitcher/issues) or [contact@akselinc.com](mailto:contact@akselinc.com). We're here to assist you on your journey with PicSwitcher.
+## 10. Credits
+PicSwitcher is built with the following technologies and resources:
+
+- Built with Next.js and Ant Design
+- Images from Unsplash
+
+## 11. Sponsors
+Show appreciation to our sponsors who support the development of PicSwitcher. If you're interested in becoming a sponsor, please reach out to us at [contact@akselinc.com](mailto:contact@akselinc.com).
+
+## 12. Contact
+Feel free to contact us for general inquiries, suggestions, or feedback at [contact@akselinc.com](mailto:contact@akselinc.com).
+
+## 13. Contact Support
+If you encounter challenges or have questions, don't hesitate to reach out to our community and support team via [GitHub Issues](https://github.com/Akselinc/PicSwitcher/issues) or [support@stackfoss.com](mailto:contact@akselinc.com). We're here to assist you on your journey with PicSwitcher.
