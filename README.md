@@ -68,7 +68,7 @@ To see the live website powered by PicSwitcher, visit [PicSwitcher Live Demo](ht
 We welcome contributions from the community! If you'd like to contribute to PicSwitcher, please follow our [Contribution Guidelines](CONTRIBUTING.md).
 
 ## 8. License
-PicSwitcher is released under the [MIT License](LICENSE).
+PicSwitcher is released under the [MIT License](https://github.com/Akselinc/PicSwitcher/blob/main/LICENSE.md).
 
 ## 9. Additional Resources
 Explore these resources for further guidance:
