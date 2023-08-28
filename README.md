@@ -1,4 +1,4 @@
-# PicSwitcher Theme
+# PicSwitcher 
 
 Welcome to the PicSwitcher Next.js JAMstack theme! 🥳️
 
@@ -90,4 +90,4 @@ Show appreciation to our sponsors who support the development of PicSwitcher. If
 Feel free to contact us for general inquiries, suggestions, or feedback at [contact@akselinc.com](mailto:contact@akselinc.com).
 
 ## 13. Contact Support
-If you encounter challenges or have questions, don't hesitate to reach out to our community and support team via [GitHub Issues](https://github.com/Akselinc/PicSwitcher/issues) or [support@stackfoss.com](mailto:contact@akselinc.com). We're here to assist you on your journey with PicSwitcher.
+If you encounter challenges or have questions, don't hesitate to reach out to our community and support team via [GitHub Issues](https://github.com/Akselinc/PicSwitcher/issues) or [contact@akselinc.com](mailto:contact@akselinc.com). We're here to assist you on your journey with PicSwitcher.
