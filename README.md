@@ -37,7 +37,7 @@ Before you begin, ensure that your system meets the following requirements:
 ## 3. Installation Steps
 Follow these steps to install PicSwitcher using Yarn:
 
-1. Clone the repository: `git clone https://github.com/your-username/PicSwitcher.git`
+1. Clone the repository: `git clone https://github.com/Akselinc/PicSwitcher.git`
 2. Navigate to the theme's directory: `cd PicSwitcher`
 3. Install the required dependencies using Yarn: `yarn install`
 4. Start Development Server: Run `yarn dev` to start the development server. Open your browser and navigate to http://localhost:3000 to see the initial website.
