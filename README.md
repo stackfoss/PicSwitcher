@@ -69,7 +69,7 @@ PicSwitcher comes with a range of powerful features:
 - **JPEG to PNG Conversion**: Convert JPEG images to PNG format.
 
 ## 6. Usage
-To see the live website powered by PicSwitcher, visit [PicSwitcher Live Demo](https://picswitcher.stackfoss.com). Explore the features and functionalities and get a feel for how PicSwitcher can enhance your projects.
+To see the live website powered by PicSwitcher, visit [PicSwitcher Live Demo](https://picswitcher.akselinc.com). Explore the features and functionalities and get a feel for how PicSwitcher can enhance your projects.
 
 ## 7. Contributing
 We welcome contributions from the community! If you'd like to contribute to PicSwitcher, please follow our [Contribution Guidelines](CONTRIBUTING.md).
