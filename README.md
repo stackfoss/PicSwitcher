@@ -6,7 +6,7 @@ PicSwitcher is an open-source Next.js theme that empowers you to effortlessly sw
 
 If you find this project useful and would like to support its development, consider becoming a patron:
 
-[![Support on Patreon](https://img.shields.io/badge/support-patreon-orange.svg)](https://www.patreon.com/yourusername)
+[![Support on Patreon](https://img.shields.io/badge/support-patreon-orange.svg)](https://www.patreon.com/akselinc)
 
 ## Table of Contents
 1. [Introduction](#introduction)
